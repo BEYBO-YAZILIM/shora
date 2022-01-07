@@ -19,7 +19,7 @@ if (isset($data)){
 					$result = 'error';
 				}
 			}else{
-				$result = '{ERROR} Dosya oluşturulamadı';
+				$result = '{ERROR} Dosya oluşturulamadı!!';
 			}
 		}else{
 			$result = '{ERROR} Dosya boyutu '.$size_limit.' byte\'dan küçük olmalı';

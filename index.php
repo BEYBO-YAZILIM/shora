@@ -16,7 +16,7 @@ session_start();
 		<link rel="shortcut icon" type="image/png" href="img/sinapsDDoB.png" />
 	</head>
 	<body style="height: 100vh;">
-		<h2 class="text-center">DOSYA EKLEME</h2>
+		<h2 class="text-center">DOSYA EKLEME SAYFASI</h2>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-10" style="overflow: scroll;height: 100%;">
@@ -55,7 +55,7 @@ session_start();
 							<div class="input-group m-1 pr-3">
 								<div class="custom-file">
 									<input type="file" class="custom-file-input" id="image_uploader" onchange="changeLabel($(this),'Dosyayı Yükleyiniz =>','bg-warning')" accept=".png, .jpeg, .gif, .jpg">
-									<label class="custom-file-label" for="image_uploader">Dosya Seçiniz</label>
+									<label class="custom-file-label" for="image_uploader">Dosya Seçin</label>
 								</div>
 								<div class="input-group-append">
 									<button class="input-group-text" onclick="uploadSetter($(this), 'image')">Yükle</button>
