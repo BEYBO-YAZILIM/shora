@@ -9,6 +9,8 @@ session_start();
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 		<link href="css/all.css" rel="stylesheet" type="text/css"/>
+		<link href="css/stil.css" rel="stylesheet" type="text/css"/>
+
 		<link rel="stylesheet" href="css/reset.min.css">
 		<link rel="stylesheet" href="css/trumbowyg.min.css">
 		<link rel="stylesheet" href="css/trumbowyg.colors.min.css">
@@ -39,7 +41,9 @@ session_start();
 							<div class="row justify-content-around mt-1">
 								<span id="old"></span>
 								<label for="text_duration" class="mt-2">Dosya Adı</label>
+								<div>
 								<input type="text" id="filename">
+								<span id="uyari"></span></div>
 								<button onclick="file.saveData()" class="btn btn-primary" style="border-radius: 0 !important;">KAYDET</button>
 								<button onclick="beautify()" class="btn btn-warning" style="border-radius: 0 !important;">DÜZELT</button>
 							</div>
