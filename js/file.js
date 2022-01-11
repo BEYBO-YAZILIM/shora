@@ -32,7 +32,7 @@ let file = {
                     console.log("complete");
                 });
         } else {
-        	document.getElementById("uyari").innerHTML="<== Dosya adını boş bırakmayınız...";
+        	document.getElementById("uyari").innerHTML="***Dosya adını boş bırakmayınız...";
         }
 
     },
