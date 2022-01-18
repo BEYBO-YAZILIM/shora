@@ -1,8 +1,68 @@
 /* . class
    # id */
+body {
+    background-color: #2d7b700f;
+    font-size: 1.2rem;
+}
 
+h2 {
+    font-size: 4vw;
+    color: #255c55;
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.4);
+}
 
-   #uyari{
-      color: red;
+.leaderboard__profile {
+    width: 13vw;
+}
 
-   }
+.metin_genislik {
+    width: 12vw;
+}
+
+.renk {
+    background-color: #2d7b70;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 100%;
+    text-align: center;
+}
+
+.kaydet_buton {
+    background-color: #f2f7f6;
+    border: 2px solid #2D7B70;
+    border-radius: 8px;
+    color: #2D7B70;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12pt;
+    margin: 4px 2px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.kaydet_buton:hover {
+    background-color: #2D7B70;
+    color: #f2f7f6;
+}
+
+.kaydet_buton:active {
+    background-color: #2D7B70;
+    box-shadow: 0 1px #444;
+    transform: translateY(1px);
+}
+
+.dosya_adi {
+    padding-right: 20px;
+    padding-left: 1%;
+}
+
+.uyari-border {
+    border: 10px solid #2d7b70;
+    resize: both;
+    background: #f2f7f6;
+    border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation: stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='rgb(45, 123, 112, 1)' /%3E%3Cstop offset='100%25' stop-color='rgb(173, 9, 9, 1)' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 6;
+}
