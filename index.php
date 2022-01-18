@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SinapsDDoB·Giriş</title>
+		<title>SHORA</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
@@ -18,34 +18,33 @@ session_start();
 		<link rel="shortcut icon" type="image/png" href="img/sinapsDDoB.png" />
 	</head>
 	<body style="height: 100vh;">
-		<h2 class="text-center">DOSYA EKLEME SAYFASI</h2>
+		<h2 class="text-center" style="font-weight: bold; text-shadow: 0px 3px 10px #9dc2bc;">SHORA</h2>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-10" style="overflow: scroll;height: 100%;">
 					<ul class="nav nav-tabs">
 						<li class="nav-item">
-							<a href="#text" class="nav-link active" data-toggle="tab"><i class="fas fa-paragraph"></i></a>
+							<a href="#text" class="nav-link active" data-toggle="tab"><i class="fas fa-paragraph" style="color: #2d7b70;"></i></a>
 						</li>
 						<li class="nav-item">
-							<a href="#image" class="nav-link" data-toggle="tab"><i class="fas fa-image"></i></a>
+							<a href="#image" class="nav-link" data-toggle="tab"><i class="fas fa-image" style="color: #2d7b70;"></i></a>
 						</li>
 						<li class="nav-item">
-							<a href="#video" class="nav-link" data-toggle="tab"><i class="fas fa-video"></i></a>
+							<a href="#video" class="nav-link" data-toggle="tab"><i class="fas fa-video" style="color: #2d7b70;"></i></a>
 						</li>
 						<li class="nav-item">
-							<a href="#external" class="nav-link" data-toggle="tab"><i class="fab fa-youtube"></i></a>
+							<a href="#external" class="nav-link" data-toggle="tab"><i class="fab fa-youtube" style="color: #2d7b70;"></i></a>
 						</li>
 					</ul>
 					<div class="tab-content">
 						<div id="text" class="tab-pane fade show active">
-							<div class="row justify-content-around mt-1">
+							<div class="row mt-1 dosya_adi" style="align-items: center;">
 								<span id="old"></span>
-								<label for="text_duration" class="mt-2">Dosya Adı</label>
-								<div>
-								<input type="text" id="filename">
-								<span id="uyari"></span></div>
-								<button onclick="file.saveData()" class="btn btn-primary" style="border-radius: 0 !important;">KAYDET</button>
-								<button onclick="beautify()" class="btn btn-warning" style="border-radius: 0 !important;">DÜZELT</button>
+								<label for="text_duration" class="mt-2" style="color: #2d7b70;text-shadow: 0px 3px 10px #9dc2bc; padding-right: 20px;">Dosya Adı</label>
+								<div style="padding-right: 20px;">
+								<input type="text" id="filename" style="font-size: 1.2rem;" placeholder="Alanı Boş Bırakmayınız" onfocus="uyariKaldir()">
+								<button onclick="file.saveData()" class="kaydet_buton">KAYDET</button>
+							</div>
 							</div>
 							<textarea id="file" class="trumbowyg"></textarea>
 						</div>
@@ -100,8 +99,8 @@ session_start();
 						</div>
 					</div>
 				</div>
-				<div id="slides_container" class="col-lg-2 leaderboard" style="overflow: scroll;height: 100%;">
-					<ul id="slides" class="slides leaderboard__profiles">
+				<div id="slides_container" class="col-lg-2 renk">
+					<ul id="slides" class="slides leaderboard__profiles renk">
 						
 					</ul>
 				</div>
