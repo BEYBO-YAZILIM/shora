@@ -176,6 +176,7 @@ $('.trumbowyg').trumbowyg({
         ['unorderedList', 'orderedList'],
         ['horizontalRule'],
         ['removeformat'],
+        ['foreColor', 'backColor'],
         ['code'],
         ['fullscreen']
     ]
@@ -212,17 +213,3 @@ function uyari() {
 function uyariKaldir() {
     $("#filename").removeClass("uyari-border");
 }
-
-/*function codeBlokOlustur() {
-  "use strict";
- var bolum = document.getElementsByClassName("trumbowyg-editor");
- bolum.innerHTML = "Merhaba JavaScript";
- 
- document.body.appendChild(bolum);}*/
-
-function codeBlokOlustur() {
-    document.getElementsByClassName("trumbowyg-editor")[0].innerHTML = "deneme";
-}
-
-var btnYaz = document.getElementById("btn");
-btnYaz.onclick = codeBlokOlustur;

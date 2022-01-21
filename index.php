@@ -11,6 +11,7 @@ session_start();
 		<link href="css/all.css" rel="stylesheet" type="text/css"/>
 		<link href="css/stil.css" rel="stylesheet" type="text/css"/>
 
+
 		<link rel="stylesheet" href="css/reset.min.css">
 		<link rel="stylesheet" href="css/trumbowyg.min.css">
 		<link rel="stylesheet" href="css/trumbowyg.colors.min.css">
@@ -35,6 +36,7 @@ session_start();
 						<li class="nav-item">
 							<a href="#external" class="nav-link" data-toggle="tab"><i class="fab fa-youtube" style="color: #2d7b70;"></i></a>
 						</li>
+
 					</ul>
 					<div class="tab-content">
 						<div id="text" class="tab-pane fade show active">
@@ -46,8 +48,12 @@ session_start();
 								<button onclick="file.saveData()" class="kaydet_buton">KAYDET</button>
 							</div>
 							</div>
+								<div class="w-100" style="margin-bottom: -1.2rem;border: 0.5px solid #ccc; border-block-color: #9dc2bc;">
+									<button style="background-color: #ecf0f1;" class="btn"><i class="fas fa-code"></i></button>
+								</div>
 							<textarea id="file" class="trumbowyg"></textarea>
 						</div>
+						
 						<div id="image" class="tab-pane fade">
 							<div class="row justify-content-around mt-1">
 								<label for="image_duration" class="mt-2">Süre</label>
