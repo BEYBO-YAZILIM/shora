@@ -1,6 +1,46 @@
 <?php 
 $os=$_SERVER['HTTP_USER_AGENT'];
-$filePath = (stristr($os,"Windows")) ? "C:\User\sinapsME\\" : "/opt/sinapsME/";
+/*$yolVarMi=false;
+$filePath = (stristr($os,"Windows")) ? "C:\User\DDoB\\" : "/opt/sinapsME/DDoB/";
+
+if(stristr( $os,"Windows")) 
+{
+	$yolVarMi=is_dir("C:\User\DDoB");
+}
+else
+{
+	$yolVarMi=is_dir("/opt/DDoB/");
+}
+
+echo $yolVarMi ? 'true' : 'false';
+
+if ($yolVarMi){ //is_dir() fonksiyonu ile belirtilenin klasör olup olmadığı kontrol ediliyor. 
+// if içinde yazılmasının nedeni ise eğer bu bir klasör ise yapılacak şeylerin olmasıdır.
+	$dosya = '/opt/DDoB/catalog.json';
+	if (file_exists($dosya)) 
+	{
+		echo "$dosya diye bir dosya var";
+	    $sonuc = fopen($filePath.'/catalog.json','w');
+ 		//$yazdır= fputs($olustur,"[]");
+		if ($sonuc)
+		{
+			echo 'Klasör başarıyla oluşturuldu';
+		}
+		else{
+			echo 'Bir hata oluştu';
+		}
+	} 
+	else {
+	    echo "$dosya diye bir dosya yok";
+	}
+}
+else {
+	$olustur = mkdir($filePath);
+	echo "mkdir";
+}
+*/
+
+$filePath = (stristr($os,"Windows")) ? "C:\User\DDoB\\" : "/opt/DDoB/";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
