@@ -1,6 +1,7 @@
 let FILES;
 let FILE_CATALOG;
 let DURUM;
+let FILE_PATH;
 
 let file = {
     saveData: () => {
@@ -212,4 +213,76 @@ function uyari() {
 
 function uyariKaldir() {
     $("#filename").removeClass("uyari-border");
+}
+
+function uploadSetter(uploadButton, type) { //dosya seçildiğinde
+    var id = uploadButton.parents(".input-group").find('[type="file"]').attr('id');
+    var uploadableFile = document.getElementById(id); //file_upload id li elemanı al, file input
+    var fileName = uploadableFile.value.split("\\");
+    fileName = fileName[fileName.length - 1];
+    if (uploadableFile.files && uploadableFile.files[0]) { //dosya var ve resim türünde ise
+        if (!uploadableFile.files[0].type.match(type + '.*')) {
+            alert("Dosya Türü Yanlış!\nİstenen: " + type + ".*\nBulunan: " + uploadableFile.files[0].type);
+            return;
+        }
+        var reader = new FileReader(); //FileReader class kur
+        reader.onload = function(file) { //veriyi yükle
+            if (type == "video") {
+                setVideoDuration(file);
+            }
+            var fileData = reader.result; //dosya verisi
+
+            upload(fileName, fileData).then((data) => {
+                if (data == "success") {
+                    changeLabel($(uploadableFile), fileName, "bg-success");
+                    alert("Dosya başarıyla yüklendi");
+                    imgopen(fileName);
+                } else {
+                    changeLabel($(uploadableFile), "Bir Hata Meydana Geldi", "bg-danger");
+                    alert("Video/Resim: " + data); //hata mesajini goster
+                }
+            });
+        }
+        reader.readAsDataURL(uploadableFile.files[0]); //oku
+    } else {
+        alert('Yüklenecek Dosya Bulunamadı!')
+    }
+};
+
+function upload(fileName, fileData) {
+    return new Promise((resolve, reject) => {
+        $.ajax({ //dosya data sını ajax.php ye postala
+            url: "upload.php",
+            type: "POST",
+            data: {
+                "dosyaAdi": fileName,
+                "veri": fileData
+            },
+            dataType: "json",
+            success: function(data) {
+                data= data.split("-");
+                FILE_PATH=data[1];
+                data=data[0];
+                resolve(data);
+            }
+        });
+    });
+}
+
+function changeLabel(fileInput, label, labelClass) {
+    fileInput.siblings('label').text(label);
+    fileInput.siblings('label').removeClass().addClass('custom-file-label ' + labelClass);
+}
+
+function setVideoDuration(file) {
+    var fileContent = file.target.result;
+    $('body').append('<video id="vid" hidden duration="" onloadeddata="getVideoDuration()" metadata src="' +
+        fileContent + '"></video>');
+
+}
+
+function imgopen(fileName) {
+    console.log("281- imgopen");
+ 
+     document.getElementsByClassName("trumbowyg-editor")[0].innerHTML = "<img src=" + FILE_PATH+fileName + ">";
 }
