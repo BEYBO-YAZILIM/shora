@@ -215,6 +215,12 @@ function uyariKaldir() {
     $("#filename").removeClass("uyari-border");
 }
 
+function yaz() {
+
+    $(".trumbowyg-editor:first").append("<p><code>" + ($("#textYaz").val()) + "</code></p><br>");
+    $("#textYaz").val(" ");
+}
+
 function uploadSetter(uploadButton, type) { //dosya seçildiğinde
     var id = uploadButton.parents(".input-group").find('[type="file"]').attr('id');
     var uploadableFile = document.getElementById(id); //file_upload id li elemanı al, file input
@@ -260,9 +266,9 @@ function upload(fileName, fileData) {
             },
             dataType: "json",
             success: function(data) {
-                data= data.split("-");
-                FILE_PATH=data[1];
-                data=data[0];
+                data = data.split("-");
+                FILE_PATH = data[1];
+                data = data[0];
                 resolve(data);
             }
         });
@@ -282,7 +288,7 @@ function setVideoDuration(file) {
 }
 
 function imgopen(fileName) {
-    console.log("281- imgopen");
- 
-     document.getElementsByClassName("trumbowyg-editor")[0].innerHTML = "<img src=" + FILE_PATH+fileName + ">";
+    console.log("285- imgopen");
+    $(".trumbowyg-editor:first").append("<img src='http://120.120.16.150/shora/upload.php?i=" + fileName + "' width='250'><br>");
+
 }

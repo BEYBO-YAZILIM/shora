@@ -10,8 +10,6 @@ session_start();
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
 		<link href="css/all.css" rel="stylesheet" type="text/css"/>
 		<link href="css/stil.css" rel="stylesheet" type="text/css"/>
-
-
 		<link rel="stylesheet" href="css/reset.min.css">
 		<link rel="stylesheet" href="css/trumbowyg.min.css">
 		<link rel="stylesheet" href="css/trumbowyg.colors.min.css">
@@ -49,8 +47,38 @@ session_start();
 							</div>
 							</div>
 								<div class="w-100" style="margin-bottom: -1.2rem;border: 0.5px solid #ccc; border-block-color: #9dc2bc;">
-									<button style="background-color: #ecf0f1;" class="btn"><i class="fas fa-code"></i></button>
+									<button type="button" data-toggle="modal" data-target="#myModal" class="fas fa-code btn btn-lg btn-block" style="background-color: #2d7b70;color: white;"></button>
+							        <!-- Modal -->
+							        <div class="modal" id="myModal" role="dialog">
+							           <div class="modal-dialog modal-still" style="">
+							                <!-- Modal content-->
+							                <div class="modal-content" style="background-color:#2d7b700f">
+							                    <div class="modal-header">
+							                        <h4 class="modal-title">Kodlarınızı Yazınız</h4>
+							                        <button class="cikis" data-dismiss="modal"> X</button>
+							                    </div>
+							                    <div class="modal-body">
+												<textarea id="textYaz" style="height: 250px; width:470px;"></textarea>				</div>
+							                    <div class="modal-footer">
+							                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="yaz()" style="color: white;border-color: cadetblue;">Close</button>
+							                    </div>
+							                </div>
+							            </div>
+							        </div>
+									<div id="text" class="tab-pane fade show active">
+							<div id="image" class="tab-pane fade active show">
+								<div class="input-group m-1 pr-3">
+									<div class="custom-file">
+										<input type="file" class="custom-file-input" id="image_uploader" onchange="changeLabel($(this),'Dosyayı Yükleyiniz =>','bg-warning')" accept=".png, .jpeg, .gif, .jpg">
+										<label class="custom-file-label" for="image_uploader">Dosya Seçiniz</label>
+									</div>
+									<div class="input-group-append">
+										<button class="input-group-text" onclick="uploadSetter($(this), 'image')">Yükle</button>
+									</div>
 								</div>
+								</div></div>
+								</div>
+
 							<textarea id="file" class="trumbowyg"></textarea>
 						</div>
 						
