@@ -46,12 +46,12 @@ session_start();
 								<button onclick="file.saveData()" class="kaydet_buton">KAYDET</button>
 							</div>
 							</div>
-								<div class="w-100" style="margin-bottom: -1.2rem;border: 0.5px solid #ccc; border-block-color: #9dc2bc;">
+								<!-- <div class="w-100" style="margin-bottom: -1.2rem;border: 0.5px solid #ccc; border-block-color: #9dc2bc;">
 									<button type="button" data-toggle="modal" data-target="#myModal" class="fas fa-code btn btn-lg btn-block" style="background-color: #2d7b70;color: white;"></button>
-							        <!-- Modal -->
+							        **Modal **
 							        <div class="modal" id="myModal" role="dialog">
 							           <div class="modal-dialog modal-still" style="">
-							                <!-- Modal content-->
+							                ** Modal content **
 							                <div class="modal-content" style="background-color:#2d7b700f">
 							                    <div class="modal-header">
 							                        <h4 class="modal-title">Kodlarınızı Yazınız</h4>
@@ -64,7 +64,7 @@ session_start();
 							                    </div>
 							                </div>
 							            </div>
-							        </div>
+							        </div>-->
 									<div id="text" class="tab-pane fade show active">
 							<div id="image" class="tab-pane fade active show">
 								<div class="input-group m-1 pr-3">
@@ -77,8 +77,7 @@ session_start();
 									</div>
 								</div>
 								</div></div>
-								</div>
-
+								<!--</div>-->
 							<textarea id="file" class="trumbowyg"></textarea>
 						</div>
 						

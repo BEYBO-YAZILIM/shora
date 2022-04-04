@@ -214,12 +214,12 @@ function uyari() {
 function uyariKaldir() {
     $("#filename").removeClass("uyari-border");
 }
-
+/*
 function yaz() {
 
     $(".trumbowyg-editor:first").append("<p><code>" + ($("#textYaz").val()) + "</code></p><br>");
     $("#textYaz").val(" ");
-}
+}*/
 
 function uploadSetter(uploadButton, type) { //dosya seçildiğinde
     var id = uploadButton.parents(".input-group").find('[type="file"]').attr('id');
@@ -292,3 +292,11 @@ function imgopen(fileName) {
     $(".trumbowyg-editor:first").append("<img src='http://120.120.16.150/shora/upload.php?i=" + fileName + "' width='250'><br>");
 
 }
+
+const kod_etiketi = /\*\*([A-z0-9]+)\*\*/;
+let kodMu = false;
+
+
+$(".trumbowyg-editor:first").keyup(function() {
+    $('.trumbowyg-editor:first').html($('.trumbowyg-editor:first').text().replace(kod_etiketi, '<code>$1</code>'));
+});
